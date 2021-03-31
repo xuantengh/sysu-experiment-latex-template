@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{margin=3cm, vmargin={3cm}}
+
+% useful packages.
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{appendix}
+\usepackage{bm}
+\usepackage{ctex}
+\usepackage{colortbl}
+\usepackage{diagbox}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{graphicx}       
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{layout}
+\usepackage{xcolor}
+\usepackage{xeCJK}
+\usepackage{subfigure}
+
+% \usepackage{mathpazo} % 设置字体
+
+\usepackage{sysulab}
+\setlength{\parindent}{1em}
+\renewcommand{\baselinestretch}{1.5}
+\newcommand{\ie}{\textit{i.e.}}
+
+% define used colors
+\definecolor{GRay}{RGB}{200, 200, 200}
+
+% cancel date demonstration
+\date{}
+
+% set experiment report title, used in next.
+\newcommand{\rtitle}{实验报告名称}
+\newcommand{\lecturename}{课程名称}
+\newcommand{\instructorname}{任课教师}
+\newcommand{\sgrade}{2018}
+\newcommand{\smajor}{计算机科学与技术}
+\newcommand{\sname}{你的名字}
+\newcommand{\sid}{你的学号}
+\newcommand{\semail}{president@mail.sysu.edu.cn} % 填你的邮箱
+
+\begin{document}
+
+%%%% DO NOT MODIFY HERE 
+\pagestyle{fancy}
+\fancyhead{}
+\lhead{\sname}
+\chead{\rtitle}
+\rhead{\today}
+
+% \maketitle
+\centerline{\LARGE \rtitle}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.7]{sysu_logo.png}
+\end{figure} 
+% set lecture information
+\centerline{Lecture: \textbf{\lecturename} \qquad Instructor: \textbf{\instructorname}}
+% set head table
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        % \toprule 
+        \hline
+        \cellcolor{GRay} 年级 & \sgrade & \cellcolor{GRay} 专业 & \smajor \\
+        \hline
+        \cellcolor{GRay} 学号 & \sid &\cellcolor{GRay} 姓名 & \sname \\
+        \hline
+        \cellcolor{GRay} 邮箱 & \href{mailto:\semail}{\semail} &\cellcolor{GRay} 日期 & \today \\
+        \hline
+        % \bottomrule
+    \end{tabular}    
+\end{table}
+
+%%%% DO NOT MODIFY ABOVE
+
+\section{实验目的}
+
+使用参考文献的示例\cite{vaswani2017attention}.
+
+插入代码的示例:
+
+\begin{lstlisting}[style=sysupython]
+def main():
+    print("hello world")
+\end{lstlisting}
+代码高亮风格可在\texttt{sysulab.sty}中修改.
+\begin{lstlisting}[style=sysucpp]
+#include <iostream>
+using namespace std;
+int main() {
+    printf(123);
+}
+\end{lstlisting}
+
+
+%
+% References will then be sorted and formatted in the correct style
+%
+\clearpage
+
+\bibliographystyle{unsrt}
+\bibliography{ref}
+
+\end{document}
