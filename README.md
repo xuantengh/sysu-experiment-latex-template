@@ -3,7 +3,7 @@
 This repo contains LaTeX template for experiment (mainly for CS) report.
 
 *TODO*:
-- [ ] add vscode configure file to 
+- [ ] add vscode configure file to improve ease of use
 - [ ] exploit github action to enable automatic compiling
 
 ## Getting Started
@@ -12,6 +12,6 @@ This repo contains LaTeX template for experiment (mainly for CS) report.
 2. enter the directory, compile `main.tex` (Chinese version) or `main_en.tex` (English
    version) by `xelatex` :arrow_right: `bibtex` :arrow_right: `xelatex` x 2.
 
-You can also upload this to online platform like [overleaf](overleaf.com).
+You can also upload this to online platform like [overleaf](https://overleaf.com).
 
 Click :star: if you find this repo helpful. Any suggestions and PR are welcome.
