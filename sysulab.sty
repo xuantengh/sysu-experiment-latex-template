@@ -11,6 +11,8 @@
 \colorlet{identifiercolor}{blue}
 \colorlet{exceptioncolour}{pink!60!black}
 \colorlet{magicmethodcolour}{violet}
+\colorlet{magicmethodcolour}{violet}
+\definecolor{solarized@magenta}{HTML}{D33682}
 
 % 定义Python代码风格
 % 由于listing中自带的Python高亮模块并不完整，因此手动添加一些需要高亮的关键字
@@ -60,6 +62,9 @@
     keywordstyle=\bfseries\color{keywordcolor},
     commentstyle=\itshape\color{commentcolor},
     stringstyle=\color{stringcolor},
-    identifierstyle=\color{blue}
+    identifierstyle=\color{blue},
+    emph={long, unsigned, int, char, float, double, bool, vector, string, size_t},
+    emphstyle=\bfseries\color{solarized@magenta},
 }
 \lstnewenvironment{cpp}[1][]{\lstset{style=sysucpp}}{}
+\newcommand*{\ccpp}{\lstinline[style=sysucpp]}
