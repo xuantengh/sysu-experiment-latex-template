@@ -1,0 +1,31 @@
+name: LaTeX-autobuild
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: wwyf/texlive-container:sha-d64fad8
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Build
+        run: |
+          apt install -y make
+          apt-get -y install fonts-noto-cjk
+          make chinese
+          make english
+
+      - uses: actions/upload-artifact@v2
+        with:
+          path: main*.pdf
